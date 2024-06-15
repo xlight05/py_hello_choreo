@@ -39,7 +39,7 @@ components:
     Response:
       type: object
       properties:
-        resp:
+        response:
           type: string
     Query:
       type: object
