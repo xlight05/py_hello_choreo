@@ -8,5 +8,5 @@ async def root():
     return {"message": "Hello World"}
 
 @api.post("/ask")
-async def root():
+async def ask():
     return {"resp": "Hello World"}
