@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: API Marketplace Chatbot
+  title: AI Backend
   version: 0.1.0
 paths:
   /:
@@ -19,6 +19,12 @@ paths:
     post:
       summary: askQuestion
       operationId: AskQuestion
+      requestBody:
+        content:
+          application/json:
+            schema: {
+              "$ref": "#/components/schemas/Query"
+            }
       responses:
         "200":
           description: Successful operation
@@ -34,4 +40,9 @@ components:
       type: object
       properties:
         resp:
+          type: string
+    Query:
+      type: object
+      properties:
+        message:
           type: string
