@@ -14,3 +14,24 @@ paths:
           content:
             application/json:
               schema: {}
+  /ask:
+    summary: Ask Question
+    post:
+      summary: askQuestion
+      operationId: AskQuestion
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+
+
+components:
+  schemas:
+    Response:
+      type: object
+      properties:
+        resp:
+          type: string
