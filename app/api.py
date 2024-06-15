@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+api = FastAPI()
 
 
-@app.get("/")
+@api.get("/")
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/ask")
+@api.post("/ask")
 async def root():
     return {"resp": "Hello World"}
