@@ -22,9 +22,8 @@ paths:
       requestBody:
         content:
           application/json:
-            schema: {
+            schema: 
               "$ref": "#/components/schemas/Query"
-            }
       responses:
         "200":
           description: Successful operation
